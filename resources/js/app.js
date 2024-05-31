@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.toggle('dark');
         icon.classList.toggle('fa-moon');
         icon.classList.toggle('fa-sun');
+
+        if (document.body.classList.contains('dark')) {
+            logo.src = logo.getAttribute('data-logo-blanc');
+        } else {
+            logo.src = logo.getAttribute('data-logo-bleu');
+        }
     });
 });
 

@@ -178,6 +178,7 @@ header {
     justify-content: space-between;
     position: relative;
     z-index: 10;
+    padding-top: 10px;
 
     .logo {
         display: flex;
@@ -1375,7 +1376,6 @@ header {
             }
         }
     }
-    
 
     button.icon-menu-mobile {
         display: block;
@@ -1386,7 +1386,7 @@ header {
         right: 50px;
         top: 25px;
         transform: scale(1.5);
-        color: #125369;
+        color: var(--text-color);
     }
 
     .menu-mobile {
