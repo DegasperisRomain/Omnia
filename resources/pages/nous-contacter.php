@@ -133,28 +133,33 @@
     </div>
 
     <?php
-    // Vérifie si le formulaire a été soumis
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nom = $_POST['nom'];
-        $prenom = $_POST['prenom'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $message = $_POST['message'];
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $website = $_POST['website'];
 
-        $to = "rdegasperis11@gmail.com";
-        $subject = "Nouveau message de " . $prenom . " " . $nom;
+            if (!empty($website)) {
+                die("Erreur : Tentative de spam détectée.");
+            }
 
-        $txt = "Vous avez reçu un nouveau message de " . $prenom . " " . $nom . ":\n\n" . $message . "\n\n" .
-        "Infos client:\nEmail: " . $email . "\nTéléphone: " . $phone;
-        
-        
-        if (mail($to, $subject, $txt)) {
-            $success = true;
-        } else {
-            $success = false;
+            $nom = $_POST['nom'];
+            $prenom = $_POST['prenom'];
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $message = $_POST['message'];
+
+            $to = "rdegasperis11@gmail.com";
+            $subject = "Nouveau message de " . $prenom . " " . $nom;
+
+            $txt = "Vous avez reçu un nouveau message de " . $prenom . " " . $nom . ":\n\n" . $message . "\n\n" .
+            "Infos client:\nEmail: " . $email . "\nTéléphone: " . $phone;
+
+            if (mail($to, $subject, $txt)) {
+                $success = true;
+            } else {
+                $success = false;
+            }
         }
-    }
-    ?>
+        ?>
+
 <section class="section-form">
    <div class="container-form" data-aos-once="true" data-aos="fade-right">
         <div class="left">
@@ -184,34 +189,41 @@
     
 
     
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <div>
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" required>
-        </div>
-
-        <div>
-            <label for="nom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" required>
-        </div>
-
-        <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <div>
-            <label for="phone">Téléphone</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div>
-
-        <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Rédiger votre message" required></textarea>
-        </div>
-
-        <button class="btn__started" type="submit">Envoyer</button>
-    </form>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <div>
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+        
+            <div>
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+        
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        
+            <div>
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+        
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Rédiger votre message" required></textarea>
+            </div>
+        
+            <!-- Champ honeypot invisible -->
+            <div class="website">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website">
+            </div>
+        
+            <button class="btn__started" type="submit">Envoyer</button>
+        </form>
+        
 </section>
 
 
