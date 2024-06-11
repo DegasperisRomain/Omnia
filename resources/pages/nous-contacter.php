@@ -36,7 +36,7 @@
 <body class="transition-none">
     <header data-aos="fade-down" data-aos-once="true">
     <a class="logo" href="../../index.html">
-            <img id="logo" src="../../resources/images/logo-bleu.svg" alt="Logo omnia conseils"
+            <img id="logo" style="width: 75%" src="../../resources/images/logo-bleu.svg" alt="Logo omnia conseils"
                  data-logo-bleu="../../resources/images/logo-bleu.svg"
                  data-logo-blanc="../../resources/images/logo-blanc.svg">
         </a>    
