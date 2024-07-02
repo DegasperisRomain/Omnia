@@ -528,6 +528,18 @@ header .logo {
 .section-card .card-presta#flex::before {
   content: "Flex et Scalabilité";
 }
+.section-card .card-presta#Saisie::before {
+  content: "Saisie Comptable";
+}
+.section-card .card-presta#RapprochementBancaire::before {
+  content: "Rapproch. Bancaire";
+}
+.section-card .card-presta#Fourniseur::before {
+  content: "Factu. Fournisseurs";
+}
+.section-card .card-presta#Reporting::before {
+  content: "Reporting Financier";
+}
 .section-card .card-presta h4 {
   visibility: hidden;
 }
@@ -748,7 +760,7 @@ header .logo {
   font-size: 60px;
 }
 .section-infos .top .bento .bottom {
-  display: flex;
+  display: none;
   gap: 33px;
 }
 .section-infos .top .bento .bottom .KPI {
@@ -984,6 +996,13 @@ header .logo {
 }
 
 /*-----Responsive-----*/
+@media screen and (min-width: 1500px) {
+  .section-card .card-presta,
+  .section-card .card,
+  .section-card .card-large {
+    height: 650px;
+  }
+}
 @media screen and (max-width: 1500px) {
   header {
     margin: 0 60px;

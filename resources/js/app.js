@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const submenuTrigger = document.querySelector('.submenu-trigger');
     const submenuMobile = document.getElementById('submenuMobile');
     const backToMenuBtn = document.getElementById('backToMenu');
-    
+
     menuBtn.addEventListener('click', function() {
         menuMobile.classList.add('open');
     });
