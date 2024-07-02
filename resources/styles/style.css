@@ -507,6 +507,18 @@ header .logo {
 .section-card .card-presta#resultats::before {
   content: "RSLT. Mesurables";
 }
+.section-card .card-presta#stratComm::before {
+  content: "STRAT. de Comm.";
+}
+.section-card .card-presta#creationContenu::before {
+  content: "Créa. de contenu";
+}
+.section-card .card-presta#gestionRS::before {
+  content: "Gestion des RS";
+}
+.section-card .card-presta#relationPubliques::before {
+  content: "Relat. Publiques";
+}
 .section-card .card-presta#approcheIntegree::before {
   content: "Approche intégrée";
 }
