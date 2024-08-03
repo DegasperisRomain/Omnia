@@ -187,7 +187,7 @@ header {
 }
 
 .section-one {
-    min-height: 95vh;
+    min-height: 100vh;
     margin-top: -74px;
     display: flex;
     align-items: center;
@@ -223,6 +223,7 @@ header {
     }
 
     svg.puzzle {
+        max-width: 763px;
         position: absolute;
         bottom: 0;
         left: -40px;
@@ -257,96 +258,101 @@ header {
 
         .card {
             display: flex;
-            justify-content: end;
-            gap: 25%;
+            justify-content: space-between;
+            height: 500px;
 
+            .content {
+                margin-top: 25%;
+            }
             .link {
                 margin-bottom: 20px;
             }
         }
+        
         .card:nth-last-child(1) {
             background-image: url(../images/camille-g.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-        }
-    }
-
-    .card-large-story {
-        background: var(--background-card);
-        border-radius: 20px;
-        height: 500px;
-        display: flex;
-        grid-area: 1 / 2 / 2 / 4;
-        flex-direction: column;
-        justify-content: end;
-        gap: 15%;
-        align-items: center;
-        position: relative;
-
-        svg.piece {
-            position: absolute;
-            right: 24px;
-            top: 24px;
-            z-index: 100;
+            justify-content: end;
         }
 
-        .content {
-            width: 90%;
+        .card-large-story {
+            background: var(--background-card);
+            border-radius: 20px;
+            height: 500px;
             display: flex;
+            grid-area: 1 / 2 / 2 / 4;
             flex-direction: column;
-            gap: 10px;
-
-            p {
-                color: var(--text-color);
-                font-family: "Poppins";
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 300;
-                text-decoration: none;
+            justify-content: space-between;
+            
+            align-items: center;
+            position: relative;
+    
+            svg.piece {
+                position: absolute;
+                right: 24px;
+                top: 24px;
+                z-index: 100;
             }
-        }
-
-        .link {
-            text-decoration: none;
-            bottom: 50px;
-            right: 25px;
-            display: flex !important;
-            justify-content: center;
-            padding: 6px 12px;
-            border-radius: 8px;
-            background: #fff;
-            margin-bottom: 20px;
-            gap: 20px;
-
-
-            .left {
+    
+            .content {
+                width: 90%;
                 display: flex;
                 flex-direction: column;
-                color: #145F79;
-
+                margin-top: 15%;
+    
                 p {
-                    color: #145F79;
+                    color: var(--text-color);
                     font-family: "Poppins";
-                    font-size: 12px;
+                    font-size: 18px;
                     font-style: normal;
                     font-weight: 300;
-                    line-height: 25px;
-                }
-
-            }
-
-            .right {
-                display: flex;
-                align-items: center;
-
-                svg {
-                    fill: #145F79;
+                    text-decoration: none;
                 }
             }
+    
+            .link {
+                text-decoration: none;
+                display: flex !important;
+                justify-content: center;
+                padding: 6px 12px;
+                border-radius: 8px;
+                background: #fff;
+                margin-bottom: 20px;
+                gap: 20px;
+    
+    
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    color: #145F79;
+    
+                    p {
+                        color: #145F79;
+                        font-family: "Poppins";
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 25px;
+                    }
+    
+                }
+    
+                .right {
+                    display: flex;
+                    align-items: center;
+    
+                    svg {
+                        fill: #145F79;
+                    }
+                }
+            }
+    
         }
-
     }
+
+
     .card-large {
         background: var(--background-card);
         display: flex;
@@ -409,7 +415,7 @@ header {
         height: 500px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         position: relative;
 
@@ -465,6 +471,7 @@ header {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            margin-top: 45%;
 
             h4 {
                 color: var(--text-color);
@@ -1255,6 +1262,11 @@ header {
 
             .card {
                 height: 300px;
+                justify-content: center;
+
+                .content {
+                    margin-top: 0;
+                }
             }
 
             .card-presta.hidden {
@@ -1550,7 +1562,7 @@ header {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
     .menu-mobile,
     .submenu-mobile {
         width: 100%;
@@ -1562,7 +1574,6 @@ header {
 
         svg.puzzle {
             width: 100%;
-            bottom: -135px;
         }
         .container {
             max-width: 100%;
@@ -1584,7 +1595,15 @@ header {
         }
         svg {
             width: 20%;
+        }        
+    }
+
+    .section-card {
+        .card-large {
+            padding: 25px 0;
+            height: auto !important;
         }
+    
     }
 
     .section-form {
@@ -1611,13 +1630,22 @@ header {
         .grid-story {
             .card-large-story {
                 height: auto;
-                padding-top: 20px;
+                justify-content: space-evenly;
+                padding: 10px 0;
 
-                .content p {
-                    padding-bottom: 20px;
+                .content {
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                    p {
+                        padding-bottom: 0px !important;
+                    }
                 }
                 .piece {
                     display: none;
+                }
+
+                .link {
+                    position: relative;
                 }
             }
 

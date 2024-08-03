@@ -170,7 +170,7 @@ header .logo {
 }
 
 .section-one {
-  min-height: 95vh;
+  min-height: 100vh;
   margin-top: -74px;
   display: flex;
   align-items: center;
@@ -202,6 +202,7 @@ header .logo {
   width: 55%;
 }
 .section-one svg.puzzle {
+  max-width: 763px;
   position: absolute;
   bottom: 0;
   left: -40px;
@@ -232,8 +233,11 @@ header .logo {
 }
 .section-card .grid-story .card {
   display: flex;
-  justify-content: end;
-  gap: 25%;
+  justify-content: space-between;
+  height: 500px;
+}
+.section-card .grid-story .card .content {
+  margin-top: 25%;
 }
 .section-card .grid-story .card .link {
   margin-bottom: 20px;
@@ -243,32 +247,32 @@ header .logo {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  justify-content: end;
 }
-.section-card .card-large-story {
+.section-card .grid-story .card-large-story {
   background: var(--background-card);
   border-radius: 20px;
   height: 500px;
   display: flex;
   grid-area: 1/2/2/4;
   flex-direction: column;
-  justify-content: end;
-  gap: 15%;
+  justify-content: space-between;
   align-items: center;
   position: relative;
 }
-.section-card .card-large-story svg.piece {
+.section-card .grid-story .card-large-story svg.piece {
   position: absolute;
   right: 24px;
   top: 24px;
   z-index: 100;
 }
-.section-card .card-large-story .content {
+.section-card .grid-story .card-large-story .content {
   width: 90%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  margin-top: 15%;
 }
-.section-card .card-large-story .content p {
+.section-card .grid-story .card-large-story .content p {
   color: var(--text-color);
   font-family: "Poppins";
   font-size: 18px;
@@ -276,10 +280,8 @@ header .logo {
   font-weight: 300;
   text-decoration: none;
 }
-.section-card .card-large-story .link {
+.section-card .grid-story .card-large-story .link {
   text-decoration: none;
-  bottom: 50px;
-  right: 25px;
   display: flex !important;
   justify-content: center;
   padding: 6px 12px;
@@ -288,12 +290,12 @@ header .logo {
   margin-bottom: 20px;
   gap: 20px;
 }
-.section-card .card-large-story .link .left {
+.section-card .grid-story .card-large-story .link .left {
   display: flex;
   flex-direction: column;
   color: #145F79;
 }
-.section-card .card-large-story .link .left p {
+.section-card .grid-story .card-large-story .link .left p {
   color: #145F79;
   font-family: "Poppins";
   font-size: 12px;
@@ -301,11 +303,11 @@ header .logo {
   font-weight: 300;
   line-height: 25px;
 }
-.section-card .card-large-story .link .right {
+.section-card .grid-story .card-large-story .link .right {
   display: flex;
   align-items: center;
 }
-.section-card .card-large-story .link .right svg {
+.section-card .grid-story .card-large-story .link .right svg {
   fill: #145F79;
 }
 .section-card .card-large {
@@ -362,7 +364,7 @@ header .logo {
   height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   position: relative;
 }
@@ -408,6 +410,7 @@ header .logo {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 45%;
 }
 .section-card .card .content h4 {
   color: var(--text-color);
@@ -1064,6 +1067,10 @@ header .logo {
   }
   .section-card .grid .card {
     height: 300px;
+    justify-content: center;
+  }
+  .section-card .grid .card .content {
+    margin-top: 0;
   }
   .section-card .grid .card-presta.hidden {
     display: none;
@@ -1282,7 +1289,7 @@ header .logo {
     padding-top: 100px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
   .menu-mobile,
   .submenu-mobile {
     width: 100%;
@@ -1292,7 +1299,6 @@ header .logo {
   }
   .section-one svg.puzzle {
     width: 100%;
-    bottom: -135px;
   }
   .section-one .container {
     max-width: 100%;
@@ -1312,6 +1318,10 @@ header .logo {
   .section-one svg {
     width: 20%;
   }
+  .section-card .card-large {
+    padding: 25px 0;
+    height: auto !important;
+  }
   .section-form {
     padding: 60px 60px 150px 60px;
   }
@@ -1329,13 +1339,21 @@ header .logo {
   }
   .section-card .grid-story .card-large-story {
     height: auto;
-    padding-top: 20px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+  }
+  .section-card .grid-story .card-large-story .content {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
   .section-card .grid-story .card-large-story .content p {
-    padding-bottom: 20px;
+    padding-bottom: 0px !important;
   }
   .section-card .grid-story .card-large-story .piece {
     display: none;
+  }
+  .section-card .grid-story .card-large-story .link {
+    position: relative;
   }
   .section-card .grid-story .piece {
     top: 25px;
