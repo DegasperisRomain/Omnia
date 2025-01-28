@@ -50,8 +50,8 @@
                     <ul class="dropdown-menu">
                         <!-- <li><a href="./evenementiel.html">Événementiel</a></li>  -->
                         <!-- <li><a href="./qhse.html">QHSE</a></li> -->
-                        <!-- <li><a href="./administratif.html">Administratif</a></li> -->
-                        <!-- <li><a href="./commercial.html">Commercial</a></li> -->
+                        <li><a href="./administratif.html">Administratif</a></li>
+                        <li><a href="./commercial.html">Commercial</a></li>
                         <li><a href="./comptabilite.html">Comptabilité</a></li>
                         <li><a href="./communication.html">Communication</a></li>
                         <li><a href="./ressources-humaines.html">RH</a></li>
@@ -105,8 +105,8 @@
         <ul>
             <!-- <li><a href="./evenementiel.html">Événementiel</a></li>  -->
                         <!-- <li><a href="./qhse.html">QHSE</a></li> -->
-                        <!-- <li><a href="./administratif.html">Administratif</a></li> -->
-                        <!-- <li><a href="./commercial.html">Commercial</a></li> -->
+                        <li><a href="./administratif.html">Administratif</a></li>
+                        <li><a href="./commercial.html">Commercial</a></li>
                         <li><a href="./comptabilite.html">Comptabilité</a></li>
                         <li><a href="./communication.html">Communication</a></li>
                         <li><a href="./ressources-humaines.html">RH</a></li>
@@ -146,7 +146,7 @@
             $phone = $_POST['phone'];
             $message = $_POST['message'];
 
-            $to = "rdegasperis11@gmail.com";
+            $to = "conseils.omnia@gmail.com";
             $subject = "Nouveau message de " . $prenom . " " . $nom;
 
             $txt = "Vous avez reçu un nouveau message de " . $prenom . " " . $nom . ":\n\n" . $message . "\n\n" .
@@ -236,8 +236,8 @@
                         <ul class="dropdown-menu">
                             <!-- <li><a href="./evenementiel.html">Événementiel</a></li>  -->
                         <!-- <li><a href="./qhse.html">QHSE</a></li> -->
-                        <!-- <li><a href="./administratif.html">Administratif</a></li> -->
-                        <!-- <li><a href="./commercial.html">Commercial</a></li> -->
+                        <li><a href="./administratif.html">Administratif</a></li>
+                        <li><a href="./commercial.html">Commercial</a></li>
                         <li><a href="./comptabilite.html">Comptabilité</a></li>
                         <li><a href="./communication.html">Communication</a></li>
                         <li><a href="./ressources-humaines.html">RH</a></li>

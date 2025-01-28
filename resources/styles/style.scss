@@ -628,11 +628,44 @@ header {
         &#Reporting::before {
             content: "Reporting Financier";
         }
-
-
-
         /* ------------------ */
 
+        /* Administratif */
+        &#gestonAchatFournisseurs::before {
+            content: "Gest. Achs & Four.";
+        }
+        &#gestionCommerciale::before {
+            content: "Gest. Commerciale";
+        }
+        &#gestionJuridiqueContractuelle::before {
+            content: "Jurid. & Contract";
+        }
+        &#gestionAdminGenerale::before {
+            content: "Gest. Admin. Génér.";
+        }
+        /* ------------------ */
+
+        /* Commercial */
+        &#ProspectionGenerationLeads::before {
+            content: "Prosp. & Leads";
+        }
+
+        &#RepresentationCommerciale::before {
+            content: "Représent. Comm.";
+        }
+
+        &#FormationCoachingCommercial::before {
+            content: "Form. & Coach.";
+        }
+        &#SupportVenteComplexe::before {
+            content: "Ventes Complexe";
+        }
+        &#GestionRelationsPartenaires::before {
+            content: "Relat. & Partenaires";
+        }
+
+        
+        /* ------------------ */
 
         h4 {
             visibility: hidden;
@@ -662,6 +695,94 @@ header {
 
         }
     }
+
+    .link-card {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
+
+#commercial .card-presta-large {
+    grid-column: span 2;
+    background: var(--background-card);
+    border-radius: 20px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 240px;
+        left: -210px;
+        width: 500px;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        transform: rotate(-90deg);
+        color: var(--text-color);
+        opacity: 0.38;
+    }
+
+    
+
+    h4 {
+        visibility: hidden;
+    }
+
+    svg {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+    }
+
+    .content {
+        width: 70%;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li, a {
+            color: var(--text-color);
+            font-family: "Poppins";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            text-decoration: none;
+        }
+
+    }
+
+    &#DeveloppementCommercial::before {
+        content: "Dévelop. Comm.";
+    }
+
+    &#GestionAnalysedesDonneesCommerciales::before {
+        content: "G&A Données Comm.";
+    }
+
+    &#FormationCoachingCommercial::before {
+        content: "Form. & Coach.";
+    }
+
+    &#ExpansionInternationale::before {
+        content: "Expan. Internat.";
+    }
+
+    &#GestionAppelsOffres::before {
+        content: "Appels d'Offres";
+    }
+    
 }
 
 .section-three {
@@ -1305,6 +1426,11 @@ header {
 
     }
 
+
+#commercial .card-presta-large {
+    grid-column: 1;
+}
+
     .section-three {
         .container-image {
             flex-direction: row-reverse;
@@ -1553,11 +1679,18 @@ header {
         }
     }
 
-    .section-card .card-large-story  {
-        height: auto;
+    .section-card {
+        .link-card {
+            flex-direction: column;
+            width: auto;
+        }
 
-        .content p {
-            padding-top: 100px;
+        .card-large-story  {
+            height: auto;
+    
+            .content p {
+                padding-top: 100px;
+            }
         }
     }
 }
